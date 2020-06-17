@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>手风琴菜单</title>
+<meta name="keywords" content="SEO关键字">
+<meta name="description" content="SEO描述">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="css/style.css">
+<script src="js/zepto.js"></script>
+</head>
+<body>
+<div class="accordion">
+    <div class="item">
+        <div class="item_tit">一个靓仔</div>
+        <div class="item_content">
+            <div class="item_con_inner">
+                <p>
+                    摆摊日记 6月8日 阴 今天第一次摆摊，旁边是个卖奶茶的，我没有开单，她开了两单，上午一单，下午一单，都是我买的
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item_tit">一个靓仔</div>
+        <div class="item_content">
+            <div class="item_con_inner">
+                <p>
+                    摆摊日记 6月8日 阴 今天第一次摆摊，旁边是个卖奶茶的，我没有开单，她开了两单，上午一单，下午一单，都是我买的
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item_tit">一个靓仔</div>
+        <div class="item_content">
+            <div class="item_con_inner">
+                <p>
+                    摆摊日记 6月8日 阴 今天第一次摆摊，旁边是个卖奶茶的，我没有开单，她开了两单，上午一单，下午一单，都是我买的
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item_tit">一个靓仔</div>
+        <div class="item_content">
+            <div class="item_con_inner">
+                <p>
+                    摆摊日记 6月8日 阴 今天第一次摆摊，旁边是个卖奶茶的，我没有开单，她开了两单，上午一单，下午一单，都是我买的
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="item">
+        <div class="item_tit">一个靓仔</div>
+        <div class="item_content">
+            <div class="item_con_inner">
+                <p>
+                     666。
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // 手风琴折叠展开
+    $(function(){
+        $('.accordion .item_tit').click(function(){
+            $parent = $(this).parent('.item');
+            if($parent.hasClass('show')){
+                $parent.removeClass('show');
+            }else{
+                $parent.siblings().removeClass('show');
+                $parent.addClass('show');
+            }
+        });
+    });
+</script>
+</body>
+</html>
