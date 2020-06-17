@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>侧边</title>
+<meta name="keywords" content="SEO关键字">
+<meta name="description" content="SEO描述">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="css/shaw.css">
+<link rel="stylesheet" href="font/iconfont.css">
+<script src="js/zepto.js"></script>
+</head>
+<body>
+
+<div style="height: 100vh">
+    <div class="btn aside_btn">右侧弹出</div>
+    <div class="aside aside_right"></div>
+    <div class="aside_mask"></div>
+    <br><a class="btn" href="#test">to test</a>
+</div>
+
+<script>
+    // 显示隐藏侧边栏
+    $('.aside_btn').on('click',function () {
+        $('.aside').toggleClass('show');
+    });
+    $('.aside_mask').on('click',function () {
+        $('.aside').removeClass('show');
+    });
+</script>
+
+</body>
+</html>
