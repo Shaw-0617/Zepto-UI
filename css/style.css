@@ -60,7 +60,7 @@ body { margin: 0; font-size: 1.4rem; }
 .aside_btn {  }
 .aside_btn .aside_left_btn {  }
 .aside_btn .aside_right_btn {  }
-.aside { position: fixed;z-index: 99;width: 300px; max-width: 90vw;background: #f0f3f8;top: 0;bottom: 0; opacity: 0.5; transition: all .3s ease-out; }
+.aside { position: fixed;z-index: 99;width: 300px; max-width: 90vw;background: #f0f3f8;top: 0;bottom: 0; opacity: 0.5; transition: all .3s ease-out;overflow: auto; }
 .aside.show { opacity: 1; }
 .aside_left {left: 0; transform: translateX(-100%); }
 .aside_left.show { transform: translateX(0); }
