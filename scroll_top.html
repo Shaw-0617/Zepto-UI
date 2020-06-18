@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>侧边</title>
+<title>回顶部</title>
 <meta name="keywords" content="SEO关键字">
 <meta name="description" content="SEO描述">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,9 +66,30 @@
         哦，墙上的斑点！那是一只蜗牛。
     </p>
 </div>
-<div class="scrollTop" onclick="goTop();">
-    <i>&uparrow;</i>
+
+<div class="top_box">
+    <div class="go_top" onclick="goTop();">
+        <i>&uparrow;</i>
+    </div>
 </div>
+
+<script>
+    // 显示/隐藏滚回顶部
+	if (document.documentElement.scrollTop<300) {
+        $('.top_box').addClass('hide');
+        $('.top_box').css('transition','none');
+    }
+    $(window).scroll(function(){
+        if (document.documentElement.scrollTop<300) {
+            $('.top_box').addClass('hide');
+            $('.top_box').css('transition','all .4s ease-out');
+        }else{
+            $('.top_box').removeClass('hide');
+            $('.top_box').css('transition','all .4s ease-out');
+        }
+    })
+</script>
+
 <script>
     // 回顶部
     function goTop(acceleration, time) {
@@ -98,11 +119,13 @@
         var speed = 1 + acceleration;
         window.scrollTo(Math.floor(x / speed), Math.floor(y / speed));
         // 如果距离不为零, 继续调用迭代本函数
-        if(x > 0 || y > 0) {
+        if(y>0) {
             var invokeFunction = "goTop(" + acceleration + ", " + time + ")";
             window.setTimeout(invokeFunction, time);
         }
     }
 </script>
+
+
 </body>
 </html>
