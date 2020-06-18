@@ -27,7 +27,7 @@ html { border: none; }
 body { background: #ffffff; color: #333333; font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto, Helvetica,Arial, sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol; border: none; max-height: 999999px; -webkit-text-size-adjust: none;}
 a, article, aside, blockquote, body, button, code, dd, details, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, img, input, legend, li, menu, nav, ol, p, pre, section, select, table, tbody, td, textarea, th, tr, ul { margin: 0; padding: 0; border: none; line-height: 1; -webkit-box-sizing: border-box; box-sizing: border-box; }
 ul,li { list-style: none; line-height: 1; }
-a { color: #333333; text-decoration: none; cursor: pointer; }
+a { color: #333333; text-decoration: none; cursor: pointer;-webkit-tap-highlight-color: transparent; }
 p {margin-bottom: 0;margin-top: 0;}
 body {background-color: #ffffff;width: 100%;}
 ol, ul {list-style: none;}
@@ -38,6 +38,7 @@ input, textarea {outline: none;}
 ul, li, p {list-style: none;padding: 0;}
 .clear:after { content: ''; display: block; clear: both; }
 body { margin: 0; font-size: 1.4rem; }
+div { -webkit-tap-highlight-color: transparent; }
 
 /*折叠面板*/
 .accordion {  }
@@ -46,7 +47,7 @@ body { margin: 0; font-size: 1.4rem; }
 .accordion .item .item_content { height: 0;overflow: hidden; background: #f0f3f8; }
 .accordion .item.show .item_content { height: auto; }
 .accordion .item .item_content .item_con_inner { opacity: 0;transform: translateY(-50%);transition: .3s ease-out;padding: 1rem; }
-.accordion .item.show .item_content .item_con_inner { opacity: 1;transform: translateY(0);  }
+.accordion .item.show .item_content .item_con_inner { opacity: 1;transform: translateY(0); }
 
 /*flex布局*/
 .flex { display: flex;margin-bottom: 1rem; }
