@@ -70,8 +70,11 @@ body { margin: 0; font-size: 1.4rem; }
 .aside.show+.aside_mask { display: block; }
 
 /*回顶部*/
-.scrollTop {position: fixed;right: 1rem;bottom: 1rem;}
-.scrollTop i { font-size: 2rem; width: 5rem;height: 5rem;display: block;line-height: 5rem;text-align: center;background: #0077aa;color: #ffffff;border-radius: 100%; }
+.go_top {position: fixed;right: 1rem;bottom: 1rem;z-index:6; }
+.go_top i { font-size: 2rem; width: 5rem;height: 5rem;display: block;line-height: 5rem;text-align: center;background: #0077aa;color: #ffffff;border-radius: 100%; }
+.top_box{ opacity: 1; }
+.top_box.hide {  opacity: 0; }
+.top_box.show {  opacity: 1; }
 
 /*单行滑动导航*/
 .nowrap_nav {background:#f2f2f2;position:relative;padding:0;margin:0;}
