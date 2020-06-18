@@ -22,26 +22,22 @@ html{font-size: 10px;}
 @media (min-width:1024px) {html {font-size:25px;} }
 @media (min-width:1080px) {html {font-size:26px;} }
 
-/**/
+/*重置*/
 html { border: none; }
 body { background: #ffffff; color: #333333; font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto, Helvetica,Arial, sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol; border: none; max-height: 999999px; -webkit-text-size-adjust: none;}
 a, article, aside, blockquote, body, button, code, dd, details, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, img, input, legend, li, menu, nav, ol, p, pre, section, select, table, tbody, td, textarea, th, tr, ul { margin: 0; padding: 0; border: none; line-height: 1; -webkit-box-sizing: border-box; box-sizing: border-box; }
 ul,li { list-style: none; line-height: 1; }
 a { color: #333333; text-decoration: none; cursor: pointer; }
 p {margin-bottom: 0;margin-top: 0;}
-body {background-color: #ffffff;}
+body {background-color: #ffffff;width: 100%;}
 ol, ul {list-style: none;}
 ol, ul {margin: 0;padding: 0;border: 0;font: inherit;}
 i, em {font-style: normal;}
 h1, h2, h3, h4, h5, h6,p {font-weight: normal;margin: 0;padding: 0;}
 input, textarea {outline: none;}
 ul, li, p {list-style: none;padding: 0;}
-.clear:after { content: ""; display: block; clear: both; }
+.clear:after { content: ''; display: block; clear: both; }
 body { margin: 0; font-size: 1.4rem; }
-
-.text { padding: 1rem; }
-.text p { font-size: 1.6rem;line-height: 2.4rem;margin-bottom: 1rem; text-indent: 2rem; }
-.btn { background: #f0f3f8; display: inline-block;height: 3rem;line-height: 3rem;padding: 0 2rem; margin-top: 1rem;font-size: 1.6rem; }
 
 /*折叠面板*/
 .accordion {  }
@@ -70,21 +66,23 @@ body { margin: 0; font-size: 1.4rem; }
 .aside.show+.aside_mask { display: block; }
 
 /*回顶部*/
-.go_top {position: fixed;right: 1rem;bottom: 1rem;z-index:6; }
-.go_top i { font-size: 2rem; width: 5rem;height: 5rem;display: block;line-height: 5rem;text-align: center;background: #0077aa;color: #ffffff;border-radius: 100%; }
-.top_box{ opacity: 1; }
+.top_box{width: 5rem;height: 5rem;position: fixed;z-index:6;right: 1rem;bottom: 6rem; opacity: 1; }
 .top_box.hide {  opacity: 0; }
 .top_box.show {  opacity: 1; }
+.go_top { }
+.go_top i { font-size: 2rem; width: 5rem;height: 5rem;display: block;line-height: 5rem;text-align: center;background: #0077aa;color: #ffffff;border-radius: 100%; }
+
 
 /*单行滑动导航*/
-.nowrap_nav {background:#f2f2f2;position:relative;padding:0;margin:0;}
+.nowrap_nav {background:#f0f3f8;position:relative;padding:0;margin:0;}
 .nowrap_nav ul {width:100%;display:-webkit-box;margin:0 auto;}
 .nowrap_nav ul li {text-align:center;-webkit-box-flex:1;display:-webkit-box;white-space:nowrap;-webkit-box-align:center;-webkit-box-pack:center;}
 .nowrap_nav.nowrap_nav_con {z-index:1;width:100%;overflow:hidden;position:relative;-webkit-backface-visibility:hidden;}
-.nowrap_nav ul li a {text-decoration:none;color:#666;display:block;width:100%;-webkit-box-sizing:border-box;padding:0 1.5rem;}
-.nowrap_nav ul li.active a {color:#07c160;}
-.nowrap_nav ul li.active a:after {content:'';display:block;height:2px;background-color:#07c160;}
+.nowrap_nav ul li a {color:#666;display:block;width:100%;-webkit-box-sizing:border-box;padding:0 1.5rem;height: 4rem;line-height: 4rem;font-size: 1.6rem;}
+.nowrap_nav ul li.active a {color:#07c160;position: relative;padding: 0 1rem;}
+.nowrap_nav ul li.active a:after {content:'';display:block;height:2px;background-color:#07c160;position: absolute;bottom: 0;width: calc(100% - 2rem);}
 .nowrap_nav ul {display:table;table-layout:fixed;white-space:nowrap;width:auto;}
 .nowrap_nav ul:after {content:'';clear:both;display:inline-block;width:0;height:0;overflow:hidden;}
 .nowrap_nav ul li {display:inline-block;}
 
+/*zeptoUI/css/style.css*/
