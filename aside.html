@@ -128,15 +128,15 @@
     </div>
 </div>
 <script>
-    // 显示隐藏侧边栏
+    // 显示侧边栏
     $('.aside_btn').on('click',function () {
         $('.aside').addClass('show');
-        $('body').css('position','fixed');
+        $('body').css('overflow','hidden');
     });
     // 点击遮罩关闭侧边栏
     $('.aside_mask').on('click',function () {
         $('.aside').removeClass('show');
-        $('body').css('position','unset');
+        $('body').css('overflow','unset');
     });
 </script>
 </body>

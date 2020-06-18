@@ -67,7 +67,7 @@
     </p>
 </div>
 
-<div class="top_box">
+<div class="top_box hide">
     <div class="go_top" onclick="goTop();">
         <i>&uparrow;</i>
     </div>
@@ -75,17 +75,13 @@
 
 <script>
     // 显示/隐藏滚回顶部
-	if (document.documentElement.scrollTop<300) {
-        $('.top_box').addClass('hide');
-        $('.top_box').css('transition','none');
-    }
     $(window).scroll(function(){
         if (document.documentElement.scrollTop<300) {
             $('.top_box').addClass('hide');
             $('.top_box').css('transition','all .4s ease-out');
         }else{
             $('.top_box').removeClass('hide');
-            $('.top_box').css('transition','all .4s ease-out');
+            $('.top_box').css('transition','none');
         }
     })
 </script>
