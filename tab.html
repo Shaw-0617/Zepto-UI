@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>选项卡</title>
+<meta name="keywords" content="SEO关键字">
+<meta name="description" content="SEO描述">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_1940382_fmqnus6pv0k.css">
+<link rel="stylesheet" href="css/zeptoUi.css">
+<script src="js/zepto.js"></script>
+</head>
+<body>
+<link rel="stylesheet" href="plugin/swiper/css/swiper.min.css">
+<script src="plugin/swiper/js/swiper.min.js"></script>
+<div class="tab_box">
+    <section class="swiper-container3">
+        <div class="tab_index">
+            <span class="active">选项卡1</span>
+            <span>选项卡2</span>
+        </div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <dl>
+                    <dt>
+                        <a href="#">
+                            <div class="text">
+                                <h3>选项卡1标题1</h3>
+                                <p>玫瑰是耐旱怕涝的植物，旱生植物几乎都是怕涝植物，如果是盆栽就要用无釉陶土盆栽培，严格把握“不干不浇，浇则浇透”的原则。</p>
+                            </div>
+                        </a>
+                    </dt>
+                    <dd>
+                        <a href="#">
+                            <span>黄牛是中国固有为最多，品种可能因此而棕</span>
+                            <i>2020.06.11</i>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <span>被毛以黄色为最多，品种可能因此</span>
+                            <i>2020.06.11</i>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <span>黄牛被毛以黄色为最多，品种可能因此而得名</span>
+                            <i>2020.06.11</i>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <span>可能因此而得名、但也有红棕</span>
+                            <i>2020.06.11</i>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <span>毛以黄色为最多，但也有</span>
+                            <i>2020.06.11</i>
+                        </a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="swiper-slide">
+                <dl>
+                    <dt>
+                        <a href="#">
+                            <div class="text">
+                                <h3>选项卡2标题2</h3>
+                                <p>玫瑰是耐旱怕涝的植物，旱生植物几乎都是怕涝植物，如果是盆栽就要用无釉陶土盆栽培，严格把握“不干不浇，浇则浇透”的原则。</p>
+                            </div>
+                        </a>
+                    </dt>
+                    <dd>
+                        <a href="#">
+                            <span>黄牛是中国固有的普通牛种。黄牛被毛以</span>
+                            <i>2020.06.11</i>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <span>被毛以黄色为最多，品种可能因此</span>
+                            <i>2020.06.11</i>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <span>黄牛被毛以黄色为最多，品种可能因此而得名</span>
+                            <i>2020.06.11</i>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <span>可能因此而得名、但也有红棕</span>
+                            <i>2020.06.11</i>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <span>毛以黄色为最多，但也有</span>
+                            <i>2020.06.11</i>
+                        </a>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+</div>
+<script>
+    var swiper = new Swiper('.swiper-container3', {
+        on: {
+            slideChangeTransitionStart: function() {
+                $(".tab_index span").removeClass("active").eq(this.activeIndex).addClass("active");
+            }
+        }
+    });
+    $(".tab_index span").click(function() {
+        var index = $(this).index();
+        $(".tab_index span").removeClass("active").eq(index).addClass("active");
+        swiper.slideTo(index, 300, false);
+    })
+</script>
+</body>
+</html>

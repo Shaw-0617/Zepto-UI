@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>向下展开式导航</title>
+<meta name="keywords" content="SEO关键字">
+<meta name="description" content="SEO描述">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="http://at.alicdn.com/t/font_1940382_fmqnus6pv0k.css">
+<link rel="stylesheet" href="css/zeptoUi.css">
+<script src="js/zepto.js"></script>
+</head>
+<body>
+<div class="drop_down_nav">
+    <div class="cover"></div>
+    <div class="dpd_con">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li><a href="#test">王者荣耀</a></li>
+            <li class="active"><a href="#">国内</a></li>
+            <li><a href="#">国际</a></li>
+            <li><a href="#">军事</a></li>
+            <li><a href="#">社会</a></li>
+            <li><a href="#">娱乐</a></li>
+            <li><a href="#">女人</a></li>
+            <li><a href="#">体育</a></li>
+            <li><a href="#">科技</a></li>
+            <li><a href="#">互联网</a></li>
+            <li><a href="#">教育</a></li>
+            <li><a href="#">财经</a></li>
+            <li><a href="#">房产</a></li>
+            <li><a href="#">汽车</a></li>
+        </ul>
+        <div class="dpd_btn"><i class="iconfont icon-arr_down"></i></div>
+    </div>
+</div>
+<script>
+    // 判断菜单是否溢出，若溢出则显示展开按钮
+    if ($(".dpd_con ul").height() > $(".dpd_con").height()) {
+        $('.dpd_btn').on('click', function () {
+            if ( $('.drop_down_nav').hasClass('unfold')){
+                $('.drop_down_nav').removeClass('unfold');
+                $('body').css('overflow','unset');
+            }else{
+                $('.drop_down_nav').addClass('unfold');
+                $('body').css('overflow','hidden');
+            }
+        });
+    } else {
+        $('.dpd_btn').hide();
+        $('body').css('overflow','unset');
+    }
+    // 点击遮罩收起溢出部分
+    $('.drop_down_nav .cover').on('click',function () {
+        $('.drop_down_nav').removeClass('unfold');
+        $('body').css('overflow','unset');
+    })
+</script>
+</body>
+</html>
