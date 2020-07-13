@@ -24,21 +24,17 @@ html{font-size: 10px;}
 
 /*重置*/
 html { border: none; }
-body { background: #ffffff; color: #333333; font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto, Helvetica,Arial, sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol; border: none; max-height: 999999px; -webkit-text-size-adjust: none;}
-a, article, aside, blockquote, body, button, code, dd, details, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, img, input, legend, li, menu, nav, ol, p, pre, section, select, table, tbody, td, textarea, th, tr, ul { margin: 0; padding: 0; border: none; line-height: 1; -webkit-box-sizing: border-box; box-sizing: border-box; }
-ul,li { list-style: none; line-height: 1; }
+body { background: #ffffff; color: #333333;font-size: 1.4rem; font-family: system-ui,-apple-system,BlinkMacSystemFont,segoe ui,Roboto, Helvetica,Arial, sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol; border: none; max-height: 999999px;width: 100%; -webkit-text-size-adjust: none;}
+a, article, aside, body, button, code, dd, div, dl, dt, footer, form, h1, h2, h3, h4, h5, h6, header, img, input, li, menu, nav, ol, p, pre, section, select, table, tbody, td, textarea, th, tr, ul { margin: 0; padding: 0; border: none; line-height: 1; -webkit-box-sizing: border-box; box-sizing: border-box; }
 a { color: #333333; text-decoration: none; cursor: pointer;-webkit-tap-highlight-color: transparent; }
-p {margin-bottom: 0;margin-top: 0;}
-body {background-color: #ffffff;width: 100%;}
-ol, ul {list-style: none;}
-ol, ul {margin: 0;padding: 0;border: 0;font: inherit;}
-i, em {font-style: normal;}
-h1, h2, h3, h4, h5, h6,p {font-weight: normal;margin: 0;padding: 0;}
-input, textarea {outline: none;}
-ul, li, p {list-style: none;padding: 0;}
-.clear:after { content: ''; display: block; clear: both; }
-body { margin: 0; font-size: 1.4rem; }
 div { -webkit-tap-highlight-color: transparent; }
+ol, ul, li {list-style: none;margin: 0;padding: 0;border: 0;font: inherit; line-height: 1;}
+i, em {font-style: normal;}
+b {font-weight: normal;}
+h1, h2, h3, h4, h5, h6 {font-weight: normal;margin: 0;padding: 0;}
+input, textarea {outline: none;}
+.clear:after { content: ''; display: block; clear: both; }
+
 
 /*折叠面板*/
 .accordion {  }
@@ -48,10 +44,6 @@ div { -webkit-tap-highlight-color: transparent; }
 .accordion .item.show .item_content { height: auto; }
 .accordion .item .item_content .item_con_inner { opacity: 0;transform: translateY(-50%);transition: .3s ease-out;padding: 1rem; }
 .accordion .item.show .item_content .item_con_inner { opacity: 1;transform: translateY(0); }
-
-/*flex布局*/
-.flex { display: flex;margin-bottom: 1rem; }
-.flex .item { background: #0077aa;color: #ffffff;flex: 1;margin: .5rem;text-align: center;padding: 1rem;}
 
 /*侧边*/
 .aside_btn {  }
@@ -104,7 +96,7 @@ div { -webkit-tap-highlight-color: transparent; }
 .drop_down_nav+script+div { padding-top: 4rem; }
 
 /*标签切换*/
-.tab_box {  }
+.tab_box { width: 100%;overflow: hidden; }
 .tab_box .tab_index {text-align: center;height: calc(4.2rem + 2px);margin: 2rem 0 1rem;}
 .tab_box .tab_index span:first-child { margin-left: 0; }
 .tab_box .tab_index span {font-size: 2.2rem;line-height: 4.2rem;height: 4.2rem;display: inline-block;margin-left: 1rem;position: relative;transition: all 0.4s ease-out;}
