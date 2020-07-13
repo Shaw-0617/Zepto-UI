@@ -73,7 +73,6 @@ div { -webkit-tap-highlight-color: transparent; }
 .go_top { }
 .go_top i { font-size: 2rem; width: 5rem;height: 5rem;display: block;line-height: 5rem;text-align: center;background: #0077aa;color: #ffffff;border-radius: 100%; }
 
-
 /*单行滑动导航*/
 .nowrap_nav {background:#f0f3f8;position:relative;padding:0;margin:0;}
 .nowrap_nav ul {width:100%;display:-webkit-box;margin:0 auto;}
@@ -85,5 +84,36 @@ div { -webkit-tap-highlight-color: transparent; }
 .nowrap_nav ul {display:table;table-layout:fixed;white-space:nowrap;width:auto;}
 .nowrap_nav ul:after {content:'';clear:both;display:inline-block;width:0;height:0;overflow:hidden;}
 .nowrap_nav ul li {display:inline-block;}
+
+/*向下展开菜单*/
+.drop_down_nav {height: 4rem;position: fixed;width: 100%;}
+.drop_down_nav .dpd_con:after { content: '';display: block;clear: both; }
+.drop_down_nav .dpd_con {max-height: 4rem;overflow: hidden;background: #f0f3f8;padding: 0 1rem;transition: all 0.3s ease-out;position: absolute;top: 0;z-index: 6;width: 100%;}
+.drop_down_nav.unfold .dpd_con {max-height: 50vh;overflow: auto; }
+.drop_down_nav .cover { content: '';display: block;height: 0;width: 100%;max-width:750px;position: relative;z-index: 5;top: 0;left: 0;right: 0;background: rgba(0,0,0,.3);overflow: hidden; }
+.drop_down_nav.unfold .cover { height: 100vh; }
+.drop_down_nav .dpd_con::-webkit-scrollbar { display: none; }
+.drop_down_nav ul {width: calc(100% - 1.8rem);}
+.drop_down_nav ul:after { content: '';display: block;clear: both; }
+.drop_down_nav ul li {float: left;}
+.drop_down_nav ul li a {display: block;line-height: 4rem;padding: 0 1rem;font-size: 1.6rem;}
+.drop_down_nav ul li.active a { color: #227edb; }
+.drop_down_nav .dpd_btn {position: absolute;z-index: 3;width: 1.8rem;height: 1.8rem;right: 1rem;top: 1.4rem;text-align: right;}
+.drop_down_nav .dpd_btn i {font-size: 1.6rem;transition: all 0.3s ease-out;display: inline-block;}
+.drop_down_nav.unfold .dpd_con .dpd_btn i {transform: rotate(180deg);}
+.drop_down_nav+script+div { padding-top: 4rem; }
+
+@media (min-width: 1367px) {
+    html { font-size:14px; }
+    body::-webkit-scrollbar { display: none; }
+    html,body { width: 750px;margin: 0 auto; }
+    .head,.foot {width: 750px !important;}
+    .head {box-shadow: none !important;border-bottom: 1px solid #eeeeee;}
+    .drop_down_nav .dpd_con { padding: 0 14px; }
+    .drop_down_nav ul { width: 722px; }
+    body:before,body:after {position: fixed;top: 0;content: '';z-index: 10000;width: 1px;height: 100vh;display: block;background: #dedede;}
+    body:before { left: calc(50% - 375px); }
+    body:after { right: calc(50% - 375px); }
+}
 
 /*zeptoUI/css/zeptoUi.css*/
