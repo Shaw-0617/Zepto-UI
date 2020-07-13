@@ -113,7 +113,7 @@ input, textarea {outline: none;}
     html,body { width: 750px;margin: 0 auto; }
     .head,.foot {width: 750px !important;}
     .head {box-shadow: none !important;border-bottom: 1px solid #eeeeee;}
-    .drop_down_nav .dpd_con { padding: 0 14px; }
+    .drop_down_nav .dpd_con {padding: 0 14px;width: 750px;}
     .drop_down_nav ul { width: 722px; }
     body:before,body:after {position: fixed;top: 0;content: '';z-index: 67;width: 1px;height: 100vh;display: block;background: #dedede;}
     body:before { left: calc(50% - 375px); }
